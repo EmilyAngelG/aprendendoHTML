@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5.0 - 2.0</title>
+</head>
+<body>
+    Livro utilizado: HTML 4.0 Fundamental - A base da programa&ccedil;&atilde;o WEB. Linguagem HTML e
+        Introdu&ccedil;&atilde;o ao JavaScript e CSS - Autor: Marcondes, Christian Alfim. O c&oacute;digo est&aacute;
+        sendo escrito na IDE PyCharm.
+    <h1 align="center"> Aqui teremos os cap&iacute;tulos 4 e 5 do livro de refer&ecirc;cia.</h1>
+    <b><font size="5">Par&aacute;grafos:</font></b> quando se coloca a tag < h1> o p&aacute;ragrafo &eacute; colocado autom&aacute;ticamente. Mas
+    podemos coloca-lo tamb&eacute;m utilizando a tag < p>. <p>Assim ele coloca par&aacute;ragrafo.</p>
+    Portanto, podemos usar tantlo o < br> quanto o < p>, por&eacute;m o < p> diferente do < br> &eacute; uma tag
+    cont&ecirc;iner, ou seja, tem abertura e fechamento deixando o c&oacute;digo mais organizado.
+    <p align="right"> Diferente do < br> o < p> tamb&eacute;m pode usar o align para definir onde ficar&aacute;
+        a frase, aqui est&aacute; em right.</p>
+    Temos tamb&eacute;m BLOCKQUOTE, essa tag recua a frase tanto na esquerda quanto na direita, &eacute; usada para
+    cita&ccedil;&otilde;es ou trechos em destaque. Exemplo:
+    <blockquote> Se você quer chegar onde a maioria n&atilde;o chega, fa&ccedil;a o que a maioria n&atilde;o faz.
+    O homem &eacute; aquilo que a sociedade faz dele. A educa&ccedil;&atilde;o n&atilde;o muda o mundo, a educa&ccedil;
+    &atilde;o muda pessoas, pessoas mudam o mundo. Ningu&eacute;m pode voltar atr&aacute;s e fazer um novo come
+    &ccedil;o mas todos podem mudar agora e fazer um novo fim.</blockquote>
+    <p align="right"> De v&aacute;rios autores.</p>
+
+    <h2 align="center"> LISTAS </h2>
+    Temos tr&ecirc;s tipos que listas: as definidas que n&atilde;o tem nenhum tipo de marca&ccedil;&atilde;o e s&oacute;
+    podem ter duas camas, as listas
+    n&atilde;o ordenadas que tem marca&ccedil;o mas n&atilde;o tem ordem num&eacute;rica, e temos as listas ordenadas,
+    essas tem ordem num&eacute;rica.
+    <h3> LISTA DE DEFINI&Ccedil;&Atilde;O:</h3>
+    <p> Aqui temos o cont&ecirc;iner < dl> e dentro dele temos o < dt> para apresentar o t&iacute;tulo, e dentro dele o
+    < dd> para apresentar os subconte&uacute;dos. Exemplo:</p>
+    <dl>
+        <dt><b>Lista para o supermercado</b></dt>
+            <dt> Alimentos:</dt>
+                <dd>Arroz</dd>
+                <dd>Feij&atilde;o</dd>
+                <dd> macarr&atilde;o</dd>
+            <dt> Para limpeza:</dt>
+                <dd>Agu&aacute; sanit&aacute;ria</dd>
+                <dd>Sab&atilde;o em p&oacute;</dd>
+    </dl>
+    <h3> LISTA N&Atilde;O-ORDENADA</h3>
+    <p>  Nessa temos o cont&ecirc;iner < ul> e os marcadores < li> e podemos adicionar sublistas dentro da lista princi
+    pal, utilizando mais < ul> e < li>. O < ul> é que inicia a lista mas os t&oacute;picos s&atilde;o escritos dentro
+        dos < li>. Aqui temos marcadores, ent&atilde;o para defini-los
+     usamos TYPE dentro do < ul> geral ou dentro de cada < li>, os TYPES podem ser circle, square, e disc e caso
+        n&atilde;o sejam definidoa o browser ir&aacute; defini-los. Exemplo: essa lista est&aacute; sem TYPE.</p>
+    <p><b>Lista para o supermercado</b></p>
+    <ul>
+        <li> Alimentos:
+            <ul>
+                <li>Arroz
+                    <ul>
+                        <li>Arroz branco ou parbolizado
+                    </ul>
+                <li>Feij&atilde;o
+                    <ul>
+                        <li> preto ou carioca
+                    </ul>
+                <li> macarr&atilde;o
+            </ul>
+        <li>Para limpeza:
+            <ul>
+                <li>Agu&aacute; sanit&aacute;ria
+                <li>Sab&atilde;o em p&oacute;
+            </ul>
+        <li>Para sobremesa
+            <ul>
+                <li>Chocolate 70%
+                <li>Leite moça
+            </ul>
+    </ul>
+
+    <h3>LISTA ORDENADA:</h3>
+    <P>Essa &eacute; a mais organizada, pois com ela podemos elencar uma ordem para os itens da lista. Aqui o cont
+    &ecirc;iner é o < ol>, dentro dele temos < li> e podemos ter novos < ol> e < li> para sublistas, assim como na
+     lista n&atilde;o ordenada. Aqui também podemos definir o TYPE, ele pode ser "1", "I", "i", "A" ou "a".
+        Esse TYPE é definido no < ol>.</P>
+    <p><b>Lista de supermercado</b></p>
+    <ol>
+        <li>Alimentos: (TYPE autom&aacute;tico sem defini&ccedil;&atilde;o)
+            <ol>
+                <li>Arroz
+                <li>Feij&atilde;o
+                <li>Macarr&atilde;o
+            </ol>
+        <li>Para limpeza: (TYPE="I")
+            <ol type="I">
+                <li>&Aacute;gua sanit&aacute;ria
+                <li>Sab&atilde;o em p&oacute;
+            </ol>
+        <li>Para sobremesa: (TYPE="a")
+            <ol type="a">
+                <li>Chocolate 70%
+                <li>Leite condensado
+            </ol>
+        <li>Para os pets: (TYPE="i")
+            <ol type="i">
+                <li>Ra&ccedil;&atilde;o de cachorro</li>
+                <li>Ra&ccedil;&atilde;o de gato</li>
+                <li>Brinquedos</li>
+            </ol>
+    </ol>
+    <p>Podemos também alterar a ordem das numera&ccedil;&atilde;oes com dois outros comandos da lista ordenada.
+    O START pode ser colocado junto com o < ol> e ele definir&aacute; o in&iacute;cio da numera&ccedil;&atilde;o.
+    O VALUE defini um novo começo no meio da lista e pode ser colocado nos < li>. Exemplos:</p>
+    <p><ol start="3">
+    <li>Para sobremesa: (TYPE="a" START="3" na principal e "4" na de dentro)
+            <ol type="1" start="4">
+                <li>Chocolate 70%
+                <li>Leite condensado
+            </ol>
+        <li>Para os pets: (TYPE="i")
+            <ol type="i">
+                <li>Ra&ccedil;&atilde;o de cachorro</li>
+                <li>Ra&ccedil;&atilde;o de gato</li>
+                <li value="9">Brinquedos(VALUE="9")</li>
+                <li>Petiscos</li>
+            </ol>
+    </ol></p>
+
+    <h2 align="center">LINHAS HORIZONTAIS</h2>
+    Vamos agora ver como s&atilde;o feitas as linhas aqui em HTML. A tag &eacute; < hr> e n&atilde;o &eacute; cont&ecirc;iner, nela teremos WIDTH que
+    define a largura em pixels ou porcentagem da linha, SIZE que define a
+    expessura em pixels, ALIGN que alinha em LEFT, RIGHT ou CENTER, COLOR que define a cor da linha. Exemplos:
+    <p>width="100%" size="2" align="center" color="blue"</p>
+    <hr width="100%" size="2" align="center" color="blue">
+    <p>width="50%" size="10" align="left" color="pink"</p>
+    <hr width="50%" size="10" align="left" color="pink">
+
+    <h2 align="center">LINKS E IMAGENS</h2>
+    Para trazer imagens ao HTML precisamos das seguintes estruturas. A tag < a> &eacute; o cont&ecirc;iner, nela temos
+    HREF onde colocamos o link propriamente dito e TARGET que define onde esse link ser&aacute; aberto, pode ser
+    _blank (em outra guia) ou _self (na mesma guia, substituindo-a). Exemplos:
+    <p>< a> href="..." target="_blank">Link para a 1° parte< /a></p>
+    <p><a href="http://localhost:63342/projetosemHTML/HTML%205%20-%2001.html?_ijt=a5rlbn1cf0edmo483phlmcu8fk&_ij_reload
+    =RELOAD_ON_SAVE" target="_blank">Link para a 1° parte</a></p>
+
+    <p><b>Imagens:</b> A tag &eacute; < img src> a tag < img> n&atilde;o &eacute; cont&ecirc;iner e deve ser seguida
+    obrigat&oacute;riamente da tag < src> pois &eacute; ela que determina qual imagem ser&aacute; utilizada.<br>
+    Lembre-se que toda e qualquer refer&ecirc;ncia, com exce&ccedil;&atilde;o de links, deve ser carregada no projeto
+        no ambiente de desenvolvimento, portanto a imagem a seguir se encontra na mesma pasta de projeto na IDE PyCharm
+        onde este c&oacute;digo est&aacute; sendo escrito. </p><p>Para <b>manipular nossa imagem</b> utilizamos as tags: WIDTH
+    para definir o tamanho em pixels ou em porcentagem da nossa imagem em largura, HEIGHT para definir em pixels ou
+    em porcentagem a altura (n&atilde;o &eacute; uma boa id&eacute;ia utilizar o WIDH e o HEIGHT ao mesmo tempo pois
+    se um vai alterar a largura e outro a altura, a imagem pode ficar estranha), VSPACE para definir o espa&ccedil;
+    amento vertical da imagem e HSPACE para definir o espa&ccedil;amento horizontal da imagem. </p><p>Al&eacute;m desses,
+    temos que pensar tamb&eacute;m no texto, o ALIGN define de o texto ficar&aacute; a LEFT ou a RIGHT da imagem.</p>
+    <br>< img src="imagem.jpg" align="right "><br>
+
+    <img src="imagem.jpg" align="right"> <p><font size="6"><b>Arthur Casas: “o modernismo envelheceu”</b></font></p>
+    <p>Ao mencionar a arquitetura contemporânea é impossível não citarmos o arquiteto brasileiro Arthur Casas, que
+        fincou a sua visão peculiar do modernismo em nível nacional e internacional. O arquiteto dirige o Studio Arthur
+        Casas com escritórios nas cidades de São Paulo e Nova York. Entre as inúmeras características que tornam Arthur
+        Casas um arquiteto de referência está a valorização da liberdade criativa. O designer não suporta o universo
+        clichê do neoclassicismo e a sensação de falso conforto revestida de materiais de péssima qualidade.</p><p>
+        Avesso às reproduções do neoclassicismo, o arquiteto considera que o estilo tem pouca relação com a cultura
+    brasileira, nosso clima e história. Para o arquiteto, por trás das construções que querem aparentar luxo e glamour
+    no neoclássico, estão materiais de péssima qualidade, o que torna esse tipo de projeto bastante popular por conta
+    do baixo custo, tornando-se um interessante investimento para as incorporadoras. </p><p>No lugar de apenas reproduzir
+    tendências e imitar estilos ultrapassados, por que não adaptá-las a um novo cenário? Nesse contexto, o arquiteto
+    considera o grande erro do modernismo contemporâneo deixar em segundo plano o conforto e a vida das pessoas.
+    Concreto aparente, metal, vidro e formas cubistas fazem parte de um modernismo incompleto, segundo a visão de
+    Arthur Casas. </p><p>É certo que a arquitetura de Casas possui forte influência dos projetos de Mies van der Rohe e Le
+    Corbusier, incluindo a presença de pilotis, integração dos espaços, planos de vidro e projetos transparentes com a
+    intenção de aconchegar todos os elementos envolvidos, todos conceitos dos cinco pontos da arquitetura moderna.
+    Mas um dos requisitos do arquiteto em seus projetos é transformar o modernismo na arquitetura, que por excelência
+    deve primar pelo conforto e responsabilidade ambiental. </p><p>É a união da natureza, do lar e das pessoas que o habitam.
+    Veja mais detalhes sobre Mies van der Rohe, um dos arquitetos que inspiraram os projetos de Arthur Casas:</p>
+
+    <br><p>< img src="imagem.jpg" align="left"></p>
+    <img src="imagem.jpg" align="left"> <p><font size="6"><b>Arthur Casas: “o modernismo envelheceu”</b></font></p>
+    <p>Ao mencionar a arquitetura contemporânea é impossível não citarmos o arquiteto brasileiro Arthur Casas, que
+        fincou a sua visão peculiar do modernismo em nível nacional e internacional. O arquiteto dirige o Studio Arthur
+        Casas com escritórios nas cidades de São Paulo e Nova York. Entre as inúmeras características que tornam Arthur
+        Casas um arquiteto de referência está a valorização da liberdade criativa. O designer não suporta o universo
+        clichê do neoclassicismo e a sensação de falso conforto revestida de materiais de péssima qualidade.</p><p>
+        Avesso às reproduções do neoclassicismo, o arquiteto considera que o estilo tem pouca relação com a cultura
+    brasileira, nosso clima e história. Para o arquiteto, por trás das construções que querem aparentar luxo e glamour
+    no neoclássico, estão materiais de péssima qualidade, o que torna esse tipo de projeto bastante popular por conta
+    do baixo custo, tornando-se um interessante investimento para as incorporadoras. </p><p>No lugar de apenas reproduzir
+    tendências e imitar estilos ultrapassados, por que não adaptá-las a um novo cenário? Nesse contexto, o arquiteto
+    considera o grande erro do modernismo contemporâneo deixar em segundo plano o conforto e a vida das pessoas.
+    Concreto aparente, metal, vidro e formas cubistas fazem parte de um modernismo incompleto, segundo a visão de
+    Arthur Casas. </p><p>É certo que a arquitetura de Casas possui forte influência dos projetos de Mies van der Rohe e Le
+    Corbusier, incluindo a presença de pilotis, integração dos espaços, planos de vidro e projetos transparentes com a
+    intenção de aconchegar todos os elementos envolvidos, todos conceitos dos cinco pontos da arquitetura moderna.
+    Mas um dos requisitos do arquiteto em seus projetos é transformar o modernismo na arquitetura, que por excelência
+    deve primar pelo conforto e responsabilidade ambiental. </p><p>É a união da natureza, do lar e das pessoas que o habitam.
+    Veja mais detalhes sobre Mies van der Rohe, um dos arquitetos que inspiraram os projetos de Arthur Casas:</p>
+
+    <br><p>< img src="imagem.jpg" align="left" width="40%" hspace="30" vspace="20"></p>
+    <img src="imagem.jpg" align="left" width="40%" hspace="30" vspace="20"> <p><font size="6"><b>Arthur Casas: “o modernismo envelheceu”</b></font></p>
+    <p>Ao mencionar a arquitetura contemporânea é impossível não citarmos o arquiteto brasileiro Arthur Casas, que
+        fincou a sua visão peculiar do modernismo em nível nacional e internacional. O arquiteto dirige o Studio Arthur
+        Casas com escritórios nas cidades de São Paulo e Nova York. Entre as inúmeras características que tornam Arthur
+        Casas um arquiteto de referência está a valorização da liberdade criativa. O designer não suporta o universo
+        clichê do neoclassicismo e a sensação de falso conforto revestida de materiais de péssima qualidade.</p><p>
+        Avesso às reproduções do neoclassicismo, o arquiteto considera que o estilo tem pouca relação com a cultura
+    brasileira, nosso clima e história. Para o arquiteto, por trás das construções que querem aparentar luxo e glamour
+    no neoclássico, estão materiais de péssima qualidade, o que torna esse tipo de projeto bastante popular por conta
+    do baixo custo, tornando-se um interessante investimento para as incorporadoras. </p><p>No lugar de apenas reproduzir
+    tendências e imitar estilos ultrapassados, por que não adaptá-las a um novo cenário? Nesse contexto, o arquiteto
+    considera o grande erro do modernismo contemporâneo deixar em segundo plano o conforto e a vida das pessoas.
+    Concreto aparente, metal, vidro e formas cubistas fazem parte de um modernismo incompleto, segundo a visão de
+    Arthur Casas. </p><p>É certo que a arquitetura de Casas possui forte influência dos projetos de Mies van der Rohe e Le
+    Corbusier, incluindo a presença de pilotis, integração dos espaços, planos de vidro e projetos transparentes com a
+    intenção de aconchegar todos os elementos envolvidos, todos conceitos dos cinco pontos da arquitetura moderna.
+    Mas um dos requisitos do arquiteto em seus projetos é transformar o modernismo na arquitetura, que por excelência
+    deve primar pelo conforto e responsabilidade ambiental. </p><p>É a união da natureza, do lar e das pessoas que o habitam.
+    Veja mais detalhes sobre Mies van der Rohe, um dos arquitetos que inspiraram os projetos de Arthur Casas:</p>
+
+    <br><p>< img src="imagem.jpg" align="right" width="20%" hspace="30" vspace="30">
+    <br>< img src="imagem2.jpg" align="right" width="23%" hspace="30" vspace="30"></p>
+    <img src="imagem.jpg" align="right" width="20%" hspace="30" vspace="30">
+    <img src="imagem2.jpg" align="right" width="23%" hspace="30" vspace="30">
+    <p><font size="6"><b>Arthur Casas: “o modernismo envelheceu”</b></font></p>
+    <p>Ao mencionar a arquitetura contemporânea é impossível não citarmos o arquiteto brasileiro Arthur Casas, que
+        fincou a sua visão peculiar do modernismo em nível nacional e internacional. O arquiteto dirige o Studio Arthur
+        Casas com escritórios nas cidades de São Paulo e Nova York. Entre as inúmeras características que tornam Arthur
+        Casas um arquiteto de referência está a valorização da liberdade criativa. O designer não suporta o universo
+        clichê do neoclassicismo e a sensação de falso conforto revestida de materiais de péssima qualidade.</p><p>
+        Avesso às reproduções do neoclassicismo, o arquiteto considera que o estilo tem pouca relação com a cultura
+    brasileira, nosso clima e história. Para o arquiteto, por trás das construções que querem aparentar luxo e glamour
+    no neoclássico, estão materiais de péssima qualidade, o que torna esse tipo de projeto bastante popular por conta
+    do baixo custo, tornando-se um interessante investimento para as incorporadoras. </p><p>No lugar de apenas reproduzir
+    tendências e imitar estilos ultrapassados, por que não adaptá-las a um novo cenário? Nesse contexto, o arquiteto
+    considera o grande erro do modernismo contemporâneo deixar em segundo plano o conforto e a vida das pessoas.
+    Concreto aparente, metal, vidro e formas cubistas fazem parte de um modernismo incompleto, segundo a visão de
+    Arthur Casas. </p><p>É certo que a arquitetura de Casas possui forte influência dos projetos de Mies van der Rohe e Le
+    Corbusier, incluindo a presença de pilotis, integração dos espaços, planos de vidro e projetos transparentes com a
+    intenção de aconchegar todos os elementos envolvidos, todos conceitos dos cinco pontos da arquitetura moderna.
+    Mas um dos requisitos do arquiteto em seus projetos é transformar o modernismo na arquitetura, que por excelência
+    deve primar pelo conforto e responsabilidade ambiental. </p><p>É a união da natureza, do lar e das pessoas que o habitam.
+    Veja mais detalhes sobre Mies van der Rohe, um dos arquitetos que inspiraram os projetos de Arthur Casas:</p>
+
+</body>
+</html>

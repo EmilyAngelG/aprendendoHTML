@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+
+    <!--Esse tipo de estilo define para o documento inteiro de forma geral-->
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        1. Aqui aprenderemos como fazer formulários na página web.
+    </h1>
+    <p>
+        Para estruturar um formulário, usaremos a tag contêiner < form></ form> e dentro dela iremos definir os
+        parâmetros do nosso formulário, são eles
+    </p>
+
+    <h3>
+        Vamos começar fazendo o formulário mais simples possível, veja esse exemplo:
+    </h3>
+    <p>
+    <pre>
+    < form>
+        < p>Nome: < input type="text">< /p>
+        < p>Sobrenome: < input type="text">< /p>
+    < /form>
+    </pre>
+    </p>
+    <p>
+        RESULTADO
+    </p>
+    <form>
+        <p>Nome: <input type="text"></p>
+        <p>Sobrenome: <input type="text"></p>
+    </form>
+    <p>
+        Observe que esse formulário recebe dados em formato de texto e no momento não está fazendo nada com esses
+        dados que são digitados pelo usuário.
+    </p>
+
+    <h3>
+        Agora observe este outro exemplo:
+    </h3>
+    <p>
+    <pre>
+    < form>
+        < p>Nome: < input type="text" name="nome">< /p>
+        < p>Sobrenome: < input type="text" name="sobrenome">< /p>
+    < /form>
+    </pre>
+    </p>
+    <form>
+        <p>Nome: <input type="text" name="nome"></p>
+        <p>Sobrenome: <input type="text" name="sobrenome"></p>
+    </form>
+    <p>
+        Repare que agora, o navegador já está sugerindo palavras relacionadas ao que está sendo solicitado
+        no formulário. Isso aconteceu porque dessa vez atribuímos um name ao input, esse name não tem a ver com 
+        o título da linha do formulário, esse é o nome que está atribuído em name. Como atribuímos o name "nome"
+        o navegador buscou no seu histórico outros formulários que já preenchemos que tinham esse mesmo name
+        e sugeriu as mesmas palavras que usamos antes. Se quiser é possível desativar essa função.
+    </p>
+
+    <h3>
+        Desativando o preenchimento automático:
+    </h3>
+    <p>
+        Para isso vamos adicionar a tag form um atributo chamado autocomplete e colocamos "off".
+    </p>
+    <p>
+    <pre>
+        < form autocomplete="off">
+            < p>Nome: < input type="text" name="nome">< /p>
+            < p>Sobrenome: < input type="text" name="sobrenome">< /p>
+        < /form> 
+    </pre>
+    </p>
+    <form autocomplete="off">
+        <p>Nome: <input type="text" name="nome"></p>
+        <p>Sobrenome: <input type="text" name="sobrenome"></p>
+    </form>    
+    
+    <h3>
+        Enviando os dados
+    </h3>
+    <p>
+        Certo, agora vamos aprender a enviar os dados recebidos no formulário, é bem simples. Basta criar um 
+        botão para enviar os dados, ou seja submete-los, da seguinte forma:
+    </p>
+    <p>
+    <pre>
+        < form action="cadastro.js">
+            < p>Nome: < input name="nome">< /p>
+            < p>Sobrenome: < input name="sobrenome">< /p>
+            < input type="submit" value="Enviar">
+        < /form>
+    </pre>
+    </p>
+    <form action="cadastro.js">
+        <p>Nome: <input name="nome"></p>
+        <p>Sobrenome: <input name="sobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+    <p>
+        Veja que o atributo action definido no form é ativado quando o usuário clica no botão de submissão 
+        e envia os dados a outro documento que irá fazer o tratamento deles, nesse caso com uma liguagem de 
+        programação. Definimos como exemplo, que os dados seriam enviados para um arquivo em JS chamado cadastro, 
+        contudo, como na verdade não criamos esse arquivo a página vai levar o usuário a um erro. Posteriormente 
+        veremos como realizar o tratamento desses dados ok.
+    </p>
+    
+    <h3>
+        Usando LABEL
+    </h3>
+    <p>
+        Um detalhe muito importante na hora de fazer um formulário, é que precisamos relacionar o nome do espaço 
+        para digitação com o próprio espaço. Nos nossos exemplos anteriores não fizemos isso, ou seja, quando escrevemos
+        "nome:" e então chamamos um input e o nome dele também era "nome" um não tinha a ver com o outro. Para fazermos 
+        essa relação é preciso utilizar o LABEL que é bem simples, veja como é:
+    </p>
+    <p>
+    <pre>
+        < form action="cadastro.js">
+            < p>
+                < label for="inome">Nome: < /label>
+                < input type="text" name="nome" id="inome">
+            < /p>
+            < p>
+                < label for="isobrenome">Sobrenome: < /label>
+                < input type="text" name="sobrenome" id="isobrenome">
+            < /p>
+            < p>
+                < input type="submit" value="Enviar">
+            < /p>
+        < /form>
+    </pre>
+    </p>
+    <p>
+        <form action="cadastro.js">
+            <p>
+                <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="isobrenome">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+    </p>
+    <p>
+        Aparentemente nada mudou, porém, se você clicar em cima da palavra "nome: " ou "sobrenome: " o espaço para 
+        digitação será acionado, pois, agora eles estão relacionados. Isso acorre porque vinculamos o nome que queriamos 
+        escrever ao id no espaço de digitação atravéd do LABEL. A utilidade disso é mais visivel em dispositivos móveis 
+        como celulares que tem um espaço menor para clicar, com essa associação o usuário pode digitar mesmo se clicar 
+        errado, no nome ao invés de na caixa de formulário. Importante dizer, utilizar o LABEL não é facultativo, é 
+        necessário sempre que estiver fazendo um formulário como esse.
+    </p>
+    <br>
+    <h1>2. E para onde vão os dados?</h1>
+    <p>
+        Bom, observe ainda mais um coisa importante. Quando o usuário clica em submeter os dados, repare que eles 
+        ficam em exibição na url na página. Isso não é extamente um problema, pois, isso ocorre mesmo como uma forma 
+        de direcionar a página. Porém, se o formulário solicitar senhas elas serão exibidas ali e ai será um problema. 
+        Vamos então cuidar disso.
+    </p>
+    <h3>
+        Metodos GET e POST
+    </h3>
+    <p> 
+        Veja, o form tem method e ele pode ser de dois tipos GET ou POST, quando não definimos o method ele 
+        automáticamente utilizará o GET que é o que esteve sendo utilizado até agora nos nossos formulários de 
+        exemplo. Mas nós podemos colocar POST no method e veremos que os dados passarão a não serem mais exibidos 
+        na url. Veja o exemplo:
+    </p>
+    <p>
+    <pre>
+        < form action="cadatro.js" method="post">
+            < p>
+                < label for="inome">Nome: < /label>
+                < input type="text" name="nome" id="inome">
+            < /p>
+            < p>
+                < label for="isobrenome">Sobrenome: < /label>
+                < input type="text" name="sobrenome" id="isobrenome">
+            < /p>
+            < p>
+                < input type="submit" value="Enviar">
+            < /p>
+        < /form>
+    </pre>
+    </p>
+    <form action="cadatro.js" method="post">
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+    <p>
+        Cabe resaltar, o POST é um método que não exibe os dados na url, porém, isso não quer dizer que esses dados 
+        estejam protegidos. O POST não está protegendo os dados, só não os está exibindo diretamente na url, mas, eles 
+        podem ser acessados de outras formas. Para proteger de fato dados, é necessário criptografá-los e isso é um 
+        outro aprendizado que não diz respeito ao que estamos aprendendo agora.
+    </p>
+    <h3>
+        Quando usar o GET e o POST
+    </h3>
+    <p>
+        É preciso usar o POST quando os dados solicitados são sensíveis e não queremos que sejam explícitamente 
+        exibidos na url, quando forem fotos e vídeos e quando o volume de dados últrapassar 3.000 bytes que é 
+        equivalente a aproximadamente 3.000 caracteres. Lembrando novamente que POST não é indicado para proteger 
+        dados importantes como números de cartões e senhas, para isso também é preciso aplicar criptografia.
+    </p>
+
+    <br>
+    <h1>3. Tipos de input no formulário</h1>
+    <p>
+        Seguem os demais types para input dentro do formulário para sabermos as funcionalidades de cada um:
+    </p>
+    <form action="cadastro.js">
+        <p>Botão: <input type="button" value="Botão"></p>
+        <p>checkbox: <input type="checkbox"></p>
+        <p>Color: <input type="color"></p>
+        <p>Date: <input type="date"></p>
+        <p>Datetime: <input type="datetime"></p>
+        <p>Datetume-local: <input type="datetime-local"></p>
+        <p>Email: <input type="email"></p>
+        <p>File: <input type="file"></p>
+        <p>Hidden: <input type="hidden"></p>
+        <p>Image: <input type="image"></p>
+        <p>Month: <input type="month"></p>
+        <p>Number: <input type="number"></p>
+        <p>Password: <input type="password"></p>
+        <p>Radio: <input type="radio"></p>
+        <p>Range: <input type="range"></p>
+        <p>Botão reset: <input type="reset" value="Limpar"></p>
+        <p>Search: <input type="search"></p>
+        <p>Tel: <input type="tel"></p>
+        <p>Time: <input type="time"></p>
+        <p>URL: <input type="url"></p>
+        <p>Week: <input type="week"></p>
+    </form>
+
+    <br>
+    <h1>4. Validação</h1>
+    <p> 
+        Faça um teste novamente e perceba, mesmo não digitando nada nas caixas de formulário a submissão é aceita e 
+        a página de tratamento é chamada. Isso ocorre porque não estamos solicitando nenhum requerimento obrigatório,
+        mas, podemos solicita-lo dentro do input da seguinte forma:
+    </p>
+    <p>
+    <pre>
+        < form action="cadastro.js" method="post">
+            < p>
+                < label for="iusuario">Usuário: < /label>
+                < input type="text" name="usuario" id="iusuario" required>
+            < /p>
+            < p>
+                < label for="isenha">Senha: < /label>
+                < input type="password" name="senha" id="isenha" required>
+            < /p>
+            < p>
+                < input type="submit" value="Enviar">
+            < /p>
+        < /form>
+    </pre>
+    </p>
+    <form action="cadastro.js" method="post">
+        <p>
+            <label for="iusuario">Usuário: </label>
+            <input type="text" name="usuario" id="iusuario" required>
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha" required>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+    <p>
+        Essas caixinhas que aparecem solicitando os dados são pequenos trechos de JS executados pelo próprio 
+        navegador a mando do required.
+    </p>
+
+    <br>
+    <h3>Validações específicas</h3>
+    <p> Também podemos solicitar características específicas para os dados que recebermos do usuário:</p>
+
+    <form action="cadastro.js" method="post">
+        <p>
+            <label for="iusuario">Usuário: </label>
+            <input type="text" name="usuario" id="iusuario" required>
+        </p>
+        <p>
+            <label for="isenha">Senha: </label>
+            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="15" >
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+    <br>
+    <h3>Pré-preenchimento</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
+</body>
+</html>

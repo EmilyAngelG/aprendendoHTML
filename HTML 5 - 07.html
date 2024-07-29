@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5.0 - 7.0</title>
+</head>
+<body>
+        Livro utilizado: HTML 4.0 Fundamental - A base da programa&ccedil;&atilde;o WEB. Linguagem HTML e
+        Introdu&ccedil;&atilde;o ao JavaScript e CSS - Autor: Marcondes, Christian Alfim. O c&oacute;digo est&aacute;
+        sendo escrito na IDE PyCharm.
+
+<font face="arial" size="4">
+<h1 align="center"><br>Aqui teremos o cap&iacute;tulo 08 do livro de refer&ecirc;ncia</h1>
+    <p>
+        Nesse cap&iacute;tulo trataremos de formul&aacute;rios. A tag cont&ecirc;iner para formul&aacute;rios &eacute;
+        < FORM> < /FORM>. Dentro do < FORM> colocamos ACTION e atribu&iacute;mos o URL de destino da inform&ccedil;
+        &atilde;o a ser coletada. METHOD onde atribu&iacute;mos o m&eacute;todo de envio dos dados, pode ser GET em que
+        os dados s&atilde;o enviados pela URL da p&aacute;gina ou POST em que os dados s&atilde;o enviados por meio
+        de uma vari&aacute;vel oculta aos olhos dos usu&aacute;rios. E NAME que define o nome do formul&aacute;rio.
+    </p>
+    <h2>A entrada dos dados</h2>
+    <p>
+        A tag utilizada &eacute; a < INPUT> e dentro dela definimos:
+        <ul>
+        <li>
+            <b>TYPE</b> que pode ser de v&aacute;rios tipos: <b>text, hidden </b>(que permite que um dado seja submetido
+            sem que o usu&aacute;rio veja), <b>password, file</b> (o file s&oacute; funcionar&aacute; corretamente se o
+            atributo ENCTYPE estiver com valor "multipart/form-data"), <b>checkbox </b>(caixa de mult&iacute;plas
+            op&ccedil;&atilde;os), <b>radio</b> (caixa de op&ccedil;&atilde;o &uacute;nica), <b>submit</b> (que &eacute;
+            um bot&atilde;o para enviar os dados), <b>reset, buttom </b>(bot&atilde;o gen&eacute;rico normalmente usado
+            para executar fun&ccedil;&otilde;es em linguagem client side como JavaScript) e <b>image </b>(como o buttom
+            mas com uma imagem associada).
+        </li>
+        <br><li>
+            <B>NAME</B> atribui nome ao dado, &eacute; um campo obrigat&oacute;rio.
+        </li>
+        <br><li>
+            <b>VALUE</b> define o que dever&aacute; ser exibido no espa&ccedil;o, quando o dao é tipo text e password
+            n&atilde;o &eacute; obrigat&oacute;rio. Quando &eacute; hidden, checkbox e radio &eacute; obrigat&oacute;rio
+            pode atribuir "ok". Quando &eacute; submit, reset e buttom atribuimos o texto que ser&aacute; exibido no
+            bot&atilde;o.
+        </li>
+        <br><li>
+            <b>SIZE </b>define o tamanho da aba de entrada de dados. Pode ser utilizado nos tipos text, password e file.
+        </li>
+        <br><li>
+            <b>MAXLENGTH</b> determina o n&uacute;mero m&aacute;ximo de caracteres que podem ser digitados na aba de entrada.
+             Pode ser utilizado nos tipos text, pasword e file.
+        </li>
+        <br><li>
+            <b>SRC</b>, quando definimos o tipo IMAGE utilizamos o SRC para atribuirmos o nome da imagem a ser exibida.
+            Nesse bot&atilde;o IMAGE, todos os demais atributos de < IMG> podem ser utilizados.
+        </li>
+        <br><li>
+            <b>CHECKED</b>, esse atributo &eacute; colocado junto a um INPUT com tipo checkbox ou radio, n&atilde;o possu&iacute;
+            valor e determina que o campo esteja j&aacute; pr&eacute; selecionado.
+        </li>
+        <br><li>
+            <b>READONLY</b>, literalmente &eacute; apenas para ser visualizado pelo usu&aacute;rio, sem que este possa
+            altera-lo. Podemos colocar uma informa&ccedil;&atilde;o em VALUE e colocar READONLY no fim do INPUT.
+        </li>
+        </ul>
+    </p>
+    <p>
+        O formul&aacute;rio abaixo possui o seguinte c&oacute;digo:
+        <br><pre>
+            < form action="dir/resultado.asp" method="post" name="form1">
+                Campo texto: < input type="text" name="texto"><br>
+                Campo oculto: < input type="hidden" name="oculto"><br>
+                Campo de senha: < input type="password" name="senha"><br>
+                Campo arquivo: < input type="file" name="arquivo"><br>
+                < input type="checkbox" name="opcao1" value="ok"> Check<br>
+                < input type="radio" name="opcao2" value="ok"> Radio<br>
+                < input type="submit" value="Enviar"><br>
+                < input type="reset" value="Limpar"><br>
+                < input type="button" name="botao" value="Bot&atilde;o"><br>
+                < input type="image" name="bt_imagem"src="ingles.png" whidth="60" height="20" border="0">
+            < /form>
+        </pre>
+    </p>
+
+    <form action="dir/resultado.asp" method="post" name="form1">
+        Campo texto: <input type="text" name="texto"><br>
+        Campo oculto: <input type="hidden" name="oculto"><br>
+        Campo de senha: <input type="password" name="senha"><br>
+        Campo arquivo: <input type="file" name="arquivo"><br>
+        <input type="checkbox" name="opcao1" value="ok"> Check<br>
+        <input type="radio" name="opcao2" value="ok"> Radio<br>
+        <input type="submit" value="Enviar"><br>
+        <input type="reset" value="Limpar"><br>
+        <input type="button" name="botao" value="Bot&atilde;o"><br>
+        <input type="image" name="bt_imagem"src="ingles.png" whidth="60" height="20" border="0">
+    </form>
+
+
+
+</font>
+</body>
+</html>

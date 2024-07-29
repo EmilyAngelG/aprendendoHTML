@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5.0 - 3.0</title>
+</head>
+<body bgcolor="#dac8b3">
+    Livro utilizado: HTML 4.0 Fundamental - A base da programa&ccedil;&atilde;o WEB. Linguagem HTML e
+    Introdu&ccedil;&atilde;o ao JavaScript e CSS - Autor: Marcondes, Christian Alfim. O c&oacute;digo est&aacute;
+    sendo escrito na IDE PyCharm. A partir daqui esta p&aacute;gina esta definida com < font face="Arial" size="4">
+
+    <font face="Arial" size="4">
+        <h1 align="center">Aqui teremos o cap&iacute;tulo 6 do livro de refer&ecirc;ncia</h1>
+        <h2 align="center">TABELAS</h2>
+        A tag relacionada a tabelas &eacute; o cont&ecirc;iner < table> e dentro dele temos,  < tr> que define as linhas
+        e < td> e < th> para definir as c&eacute;lulas, sendo que o primeiro marca o texto em negrito e alinha-o no centro.
+        Perceba que, se tratando de tabelas, sempre trabalhamos com as linhas e não com as colunas. O passo a passo é: abra
+        < tr> para a primeira linha, dentro dele abra < td> ou < th> para preencher as c&eacute;lulas, cada < td> ou < th>
+        aberto corresponde a uma nova coluna, por&eacute;m, estaremos preenchendo a linha. Por fim, adicione novos < tr> com
+        novos < td> e < th> para construir novas linhas. Logo de inicio, definiremos aqui BORDER que &eacute; um atributo
+        para adicionar bordas e para manipular cores temos, BGCOLOR para a cor da tablea ou c&eacute;lulas e BORDERCOLOR
+        para a cor das bordas.
+        <p>No exemplo abaixo abrimos < table> e dentro dele definimos BORDER="1" e BGCOLOR="white", e temos tr&ecirc;s
+            < tr>, dentro deles temos: </p>
+        <table border="1" bgcolor="white">
+            <tr>
+                <td></td>
+                <th>< TR>< th>Col 1< /th></th>
+                <th>< th>Col 2< /th>< /TR></th>
+            </tr>
+            <tr>
+                <th>< TR>< th>Linha 1< /th></th>
+                <td>< td>Cel A< /td></td>
+                <td>< td>Cel B< /td>< /TR></td>
+            </tr>
+            <tr>
+                <th>< TR>< th>Linha 2< /th></th>
+                <td>< td>Cel C< /td></td>
+                <td>< td>Cel D< /td>< /TR></td>
+            </tr>
+        </table>
+        <p>Na primeira c&eacute;lula colocamos < td> < /td> para que ficasse vazia.</p>
+        <h2>Atributos de tabela:</h2>
+        Alguns dos atributos para a constru&ccedil;&atilde;o de tabelas j&aacute; conhecemos: WIDTH determina a
+        largura da tabela ou da c&eacute;lula em pixel ou porcentagem, HEIGHT determina a altura da tabela ou da
+        c&eacute;lula em pixels ou porcentagem, aqui vale lembrar que a tabela &eacute; por si s&oacute;
+        auto-ajust&aacute;vel, usamos o WIDHT e o HEIGHT para definir tamanhos maiores mas n&atilde;o menores, pois se
+        forem menores que o necess&aacute;rio esses comandos ser&atilde;o ignorados. <p>Continuando, ALIGN quando usado no
+            < table> determina o alinhamento da tabela com rela&ccedil;&atilde;o a p&aacute;gina, e quando usado no < td>
+            ou < th> alinha o conte&uacute;do da c&eacute;lula. VALIGN determina o alinhamento vertical no conte&uacute;do
+            da c&eacute;lula podendo ser "top" para superior, "middle" para centro ou "bottom" para inferior. Exemplo: com
+            BORDER="1", BGCOLOR="white" e BORDERCOLOR="red", sem manipular WIGHT nem HEIGHT, tamb&eacute;m sem definir
+            ALIGN no < table>.</p>
+
+        <table border="1" bgcolor="white" bordercolor="red">
+            <tr align="center" valign="middle">
+                <td></td>
+                <td><b>Esquerdo</b><br>< ALIGN="left"></td>
+                <td><b>Centro</b><br>< ALIGN="center"></td>
+                <td><b>Direito</b><br>< ALIGN="right"></td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle"><b>Superior</b><br>< VALIGN="top"></td>
+                <td align="left" valign="top">Cel 1</td>
+                <td align="center" valign="top">Cel 2</td>
+                <td align="right" valign="top">Cel 3</td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle"><b>Centro</b><br>< VALIGN="middle"></td>
+                <td align="left" valign="middle">Cel 4</td>
+                <td align="center" valign="middle">Cel 5</td>
+                <td align="right" valign="middle">Cel 6</td>
+            </tr>
+            <tr>
+                <td align="center" valign="middle"><b>Inferior</b><br>< VALIGN="bottom"></td>
+                <td align="left" valign="bottom">Cel 7</td>
+                <td align="center" valign="bottom">Cel 8</td>
+                <td align="right" valign="bottom">Cel 9</td>
+            </tr>
+        </table>
+        <p>Outros atributos s&atilde;o: BACKGROUD que atribui uma imagem de fundo para a tabela, CELLPADDING que determina
+        a dist&acirc;ncia entre a borda da c&eacute;lula e seu conte&uacute;do, CELLSPACING que determina o espa&ccedil;o
+        entre uma borda e outra, as tags para mesclar c&eacute;lulas horizontais COLSPAN e verticalmente ROWSPAN.</p>
+        <p><font size="5"><b>Exemplo 1:</b></font> faremos um calend&aacute;rio para planejamento semanal, antes de abrir < table>
+            definimos < font size="4" face="verdana"> essa ser&aacute; a &uacute;ltima tag a ser fechada depois de toda a
+            tabela. </p>
+        <p>Abriremos ent&atilde;o < table bgcolor="white" border="1" align="center" cellspacing="0" cellpadding="10"> e
+            iniciaremos as linhas. Nas duas primeiras linhas definiremos um geral de < tr bgcolor="yellow" align="center">,
+            na primeira linha que &eacute; o t&iacute;tulo teremos < th colspan="8">< font size="6">Planejamento semanal<
+            /font>< /th> aqui estaremos diferenciando o t&iacute;tulo com uma letra um pouco maior e mesclaremos as demais.
+        </p><p>Na segunda linha faremos em cada uma < th width="10%">Segunda...< /th> e somente nas
+            observa&ccedil;&otilde;es deixaremos width="15%". Tamb&eacute;m fazeremos uma mescla < td rowspan="7">< /td>
+            onde ficar&aacute; o espa&ccedil;o para observa&ccedil;&otilde;es. Para todas as demais linhas iniciaremos a
+            primeira com < th bgcolor="orange" align="center" height="45">Acordar...< /th> e deixaremos vazias as
+            c&eacute;lulas restantes < td>< /td>. </p><br>
+
+        <font size="4" face="verdana">
+            <table  bgcolor="white" border="1" align="center" cellspacing="0" cellpadding="10">
+                <tr bgcolor="yellow" align="center">
+                    <th colspan="8"><font size="6">Planejamento semanal</font></th>
+                </tr>
+                <tr bgcolor="yellow" align="center">
+                    <th width="10%">Segunda</th>
+                    <th width="10%">Ter&ccedil;a</th>
+                    <th width="10%">Quarta</th>
+                    <th width="10%">Quinta</th>
+                    <th width="10%">Sexta</th>
+                    <th width="10%">S&aacute;bado</th>
+                    <th width="10%">Domingo</th>
+                    <th width="15%">Observa&ccedil;&otilde;es:</th>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">Acordar</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="7"></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">&Ocirc;nibus</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">08h - 10h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">10h - 12h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center">12-14h<br>(Almo&ccedil;o)</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">14h - 16h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="45">16h - 18h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+
+        <br><p><font size="5"><b>Exemplo 2:</b></font>Abaixo temos outro exemplo, a diferen&ccedil;a &eacute; que nessa tabela fizemos HEIGHT="30", diminuimos as
+        fontes para SIZE="3" e adicionamos em < table> CELLSPACING="10". </p>
+
+        <font size="3" face="verdana">
+            <table  bgcolor="white" border="1" cellspacing="10" align="center" cellpadding="10">
+                <tr bgcolor="yellow" align="center" >
+                    <th colspan="8"><font size="6">Planejamento semanal</font></th>
+                </tr>
+                <tr bgcolor="yellow" align="center">
+                    <th width="10%">Segunda</th>
+                    <th width="10%">Ter&ccedil;a</th>
+                    <th width="10%">Quarta</th>
+                    <th width="10%">Quinta</th>
+                    <th width="10%">Sexta</th>
+                    <th width="10%">S&aacute;bado</th>
+                    <th width="10%">Domingo</th>
+                    <th width="15%">Observa&ccedil;&otilde;es:</th>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">Acordar</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="7"></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">&Ocirc;nibus</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">08h - 10h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">10h - 12h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">12-14h<br>(Almo&ccedil;o)</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">14h - 16h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th bgcolor="orange" align="center" height="30">16h - 18h</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </font>
+        <p>Tamb&eacute;m podemos colocar o t&iacute;tulo da tabela fora dela, em cima ou embaixo, utilizamos para isso
+        < caption> logo ap&oacute;s abrir < table>. No CAPTION poderemos definir ALIGN para o alinhamento do
+        t&iacute;tulo. Exemplo:</p>
+
+        <table border="1" cellspacing="0" bgcolor="white">
+            <caption align="center"> <font size="4"><b>Planejamento semanal</b></font></caption>
+            <tr>
+                <td>Coluna 1</td>
+                <td>Coluna 2</td>
+                <td>Coluna 3</td>
+            </tr>
+            <tr>
+                <th>Linha 1</th>
+                <th> Linha 2</th>
+                <th>Linha 3</th>
+            </tr>
+        </table>
+
+        <p>Mais tarde aprenderemos como preencher essas c&eacute;lulas recebendo dados do usu&aacute;rio.</p>
+        <h2 align="center">TABELAS COMO ESTILO</h2>
+        Uma maneira interessante de utilizar as tabelas &eacute; para criar estilos de disposi&ccedil;&atilde;o de
+        texto, como por exemplo, criar uma tabela sem bordas fazendo o texto em colunas. Exemplo: usamos < table
+        cellspacing="30"> < tr align="left" valign="top"> e dividimos o conte&uacute;do em dois < td>.
+
+        <h3 align="center"><b>Arthur Casas: “o modernismo envelheceu”</b></h3>
+
+        <table cellspacing="30">
+            <tr align="left" valign="top">
+                <td>Ao mencionar a arquitetura contemporânea é impossível não citarmos o arquiteto brasileiro Arthur
+                    Casas, que fincou a sua visão peculiar do modernismo em nível nacional e internacional. O arquiteto
+                    dirige o Studio Arthur Casas com escritórios nas cidades de São Paulo e Nova York. Entre as inúmeras
+                    características que tornam Arthur Casas um arquiteto de referência está a valorização da liberdade
+                    criativa. O designer não suporta o universo clichê do neoclassicismo e a sensação de falso conforto
+                    revestida de materiais de péssima qualidade.<p>Avesso às reproduções do neoclassicismo, o
+                        arquiteto considera que o estilo tem pouca relação com a cultura brasileira, nosso clima e
+                        história. Para o arquiteto, por trás das construções que querem aparentar luxo e glamour no
+                        neoclássico, estão materiais de péssima qualidade, o que torna esse tipo de projeto bastante
+                        popular por conta do baixo custo, tornando-se um interessante investimento para as
+                        incorporadoras.</p><p>No lugar de apenas reproduzir tendências e imitar estilos ultrapassados,
+                        por   </td>
+                <td> que não adaptá-las a um novo cenário? Nesse contexto, o arquiteto considera o grande erro do
+                        modernismo contemporâneo deixarem segundo plano o conforto e a vida das pessoas. Concreto
+                        aparente, metal, vidro e formas cubistas fazem parte de um modernismo incompleto, segundo a
+                        visão de Arthur Casas. </p><p>É certo que a arquitetura de Casas possui forte influência dos
+                        projetos de Mies van der Rohe e Le Corbusier, incluindo a presença de pilotis, integração dos
+                        espaços, planos de vidro e projetos transparentes com a intenção de aconchegar todos os
+                        elementos envolvidos, todos conceitos dos cinco pontos da arquitetura moderna. Mas um dos
+                        requisitos do arquiteto em seus projetos é transformar o modernismo na arquitetura, que por
+                        excelência deve primar pelo conforto e responsabilidade ambiental. </p><p>É a união da natureza,
+                        do lar e das pessoas que o habitam. Veja mais detalhes sobre Mies van der Rohe, um dos
+                        arquitetos que inspiraram os projetos de Arthur Casas:</p></td>
+            </tr>
+        </table>
+
+
+
+
+
+
+        <br><br>
+    </font>
+</body>
+</html>
